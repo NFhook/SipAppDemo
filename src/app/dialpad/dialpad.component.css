@@ -1,0 +1,103 @@
+.dialpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  /* max-width: 320px; */
+  /* max-height: 320px; */
+  /* margin: 10px 50px 10px 50px; */
+  margin: 40px 50px 10px 50px;
+  justify-content:center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -5px;
+}
+
+.row-button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.row-button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.row-button:active {
+  background-color: #d0d0d0;
+}
+
+
+
+.call-button-dialpad {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  /* max-width: 320px; */
+  /* max-height: 320px; */
+  margin: 10px 185px;
+  justify-content:center;
+  align-items: center;
+}
+
+
+.call-button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: green;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  margin: 0 auto;
+}
+.call-button:hover {
+  background-color: green;
+  transform: scale(1.1);
+}
+
+.green-icon {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: 1px solid green;
+  border-radius: 50%;
+  background-color: green;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  margin: 0 auto;
+}
+.green-icon:hover{
+  background-color: green;
+  transform: scale(1.1);
+}
+
+.red-icon {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  margin: 0 auto;
+}
+.red-icon:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+
+
+

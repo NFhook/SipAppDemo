@@ -1,0 +1,159 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 500;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+.content {
+  display: flex;
+  margin: 0 auto 32px;
+  /*margin: 82px auto 32px; *//* default*/
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+.circle-link {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  margin: 8px;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 1s ease-out;
+}
+
+.circle-link:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+/* custom */
+.switch-autoanswer {
+  margin: 0 8px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #F00; /* Replace with your desired color */
+  margin: 0 8px;
+}
+.green-dot {
+  background-color: green;
+}
+
+.red-dot {
+   background-color: red;
+}
+.dot-text {
+  font-size: 14px;
+  color: #000; /* Replace with your desired color */
+  margin: 0 16px;
+}
+.register-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 320px;
+    /* height: 60px; */
+}
+.register-form {
+  padding: 0 16px;
+  flex-direction: column;
+  align-items: center;
+  width: 300px !important;
+  height: 20px !important;
+}
+.register-button {
+  display: flex;
+}
+
+.green-icon {
+  color: green;
+  /* background-color: green; */
+}
+
+.red-icon {
+  color: red;
+  /* background-color: red; */
+}
+
+.timer-container {
+  margin: 0 8px;
+  /* color: blue; */
+  /* display: flex; */
+  /* margin: 0 auto 16px; */
+  /*margin: 82px auto 32px; *//* default*/
+  /* padding: 0 16px; */
+  /* max-width: 960px; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+}

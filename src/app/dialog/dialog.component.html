@@ -1,0 +1,20 @@
+<div *ngIf="data.isIcomingCall">
+  <h2 mat-dialog-title>Incoming call</h2>
+  <div mat-dialog-content>
+    <p>Incoming call from {{ data.callinPhone }}</p>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-raised-button color="primary" mat-dialog-close (click)="doAnswer()">Answer</button>
+    <button mat-raised-button color="warn" (click)="doDecline()">Decline</button>
+  </div>
+</div>
+
+<div *ngIf="data.isHangup">
+  <h2 mat-dialog-title>Hangup</h2>
+  <div mat-dialog-content>
+    <p> {{ data.code }}  {{ data.reason }}</p>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-raised-button color="primary" mat-dialog-close (click)="doOK()">OK</button>
+  </div>
+</div>

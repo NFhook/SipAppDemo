@@ -1,0 +1,18 @@
+<!-- <span style="color:red; font-size: 14px;margin: 40px 120px 40px 120px;">{{ data.durationText }}</span> -->
+<div class="dialpad">
+    <!-- <span>{{ durationText }}</span> -->
+    <ng-container *ngFor="let row of phoneNumTable" class="row">
+      <button *ngFor="let button of row.row" (click)="onDialpadButtonClick(button.value)" class="row-button">{{ button.text }}</button>
+    </ng-container>
+</div>
+<div class="call-button-dialpad">
+    <!-- <button mat-mini-fab [class]="callClass" text="call" (click)="onDialpadButtonCall('call')">
+        <mat-icon>{{ callIcon }}</mat-icon>
+    </button> -->
+    <button mat-mini-fab (click)="onDialpadButtonCall('call')" [ngClass]="{ 'green-icon': !(sipStatusService.isCallDisabled$ | async), 'red-icon': sipStatusService.isCallDisabled$ | async}">
+        <mat-icon>{{ (sipStatusService.isCallDisabled$ | async) ? 'call_end' : 'call' }}</mat-icon>
+    </button>
+    <button mat-icon-button text="del" class="del-button" (click)="onDialPadButtonDel('del')" >
+        <mat-icon>clear</mat-icon>
+    </button>
+</div>
