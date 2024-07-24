@@ -8,8 +8,13 @@
 $ ng new sipApp
 $ npm install janus-gateway
 ```
-
-
+> demo
+```bash
+$ git clone https://github.com/NFhook/SipAppDemo.git
+$ cd SipAppDemo
+$ npm install
+$ npm run dev
+```
 
 TODO: 
 
