@@ -69,8 +69,9 @@ export class SipComponent  implements OnInit {
   offerlessInvite = false;
   jsep: any = null;
   //CUSTOM
+  //iceServer: use stun or turn, suggest coturn server. 
   iceServers = [{urls: "stun:10.10.22.10:3478"},{urls: "turn:10.10.22.10:3478?transport=udp", credential: "coturnadmin", username: "coturn"}];
-
+  // janus-gateway config file `janus.jcfg` apisecret
   apisecret: string = 'janusrocks';
 
   callee: string = '';
