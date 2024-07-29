@@ -100,7 +100,6 @@ export class SipComponent  implements OnInit {
     this.server = 'wss://10.10.22.10:8989/janus'; 
     Janus.init({ debug: true,callback: this.onInitDone });
     this.running = true;
-    // fromEvent(document, 'click').subscribe(() => console.log('Clicked!  ' + this.count++));
   };
 
   stop = () => {
@@ -150,16 +149,7 @@ export class SipComponent  implements OnInit {
   };
 
   doCall = () => {
-    /*
-    let button = ev ? ev.currentTarget.id : "call";
-    let helperId = button.split("call")[1];
-	if(helperId === "")
-		helperId = null;
-	else
-		helperId = parseInt(helperId);
-    let handle = helperId ? this.helpers[helperId].sipcall : this.sipcall;
-    let prefix = helperId ? ("[Helper #" + helperId + "]") : "";
-    */
+    
     let uri = this.callee;
     if(uri === "") {
         Janus.log('Please insert a valid SIP address (e.g., sip:pluto@example.com)');
@@ -167,8 +157,6 @@ export class SipComponent  implements OnInit {
     }
     if(uri.indexOf("sip:") != 0 || uri.indexOf("@") < 0) {
         uri = "sip:" + uri + "@" + "10.10.22.10:5060";
-        //Janus.log('Please insert a valid SIP address (e.g., sip:pluto@example.com)');
-        //return;
     }
     if(this.isCallDisabled) {
         this.doHangup();
@@ -177,7 +165,6 @@ export class SipComponent  implements OnInit {
     // Call this URI
     let doVideo = false;
     Janus.log("This is a SIP " + (doVideo ? "video" : "audio") + " call (dovideo=" + doVideo + ")");
-    //this.actuallyDoCall(handle, username, doVideo);
     this.sipcall.doAudio = true;
 	this.sipcall.doVideo = doVideo;
 	let tracks = [{ type: 'audio', capture: true, recv: true }];
@@ -227,8 +214,6 @@ export class SipComponent  implements OnInit {
         helperId = 0;
     }
     Janus.log("::: doAnswer() ::: " + "Helper #" + helperId);
-    // this.callIcon = 'call_end';
-    // this.callClass = 'red-icon';
     let sipcallAction: any;
     if(!helperId) {
         sipcallAction = (offerlessInvite ? this.sipcall.createOffer : this.sipcall.createAnswer);
@@ -298,7 +283,6 @@ export class SipComponent  implements OnInit {
 
   doHangup = () => {
     Janus.log("::: doHangup() ::: Count => " + this.helpersCount);
-    // this.isCallDisabled = !this.isCallDisabled;
     let helperId = this.helpersCount > 0 ? this.helpersCount : 0;
     if(helperId-- <= 0) {
         helperId = 0;
@@ -842,7 +826,6 @@ export class SipComponent  implements OnInit {
                     let offerlessInvite = false;
                     if(jsep) {
                         doAudio = (jsep.sdp.indexOf("m=audio ") > -1);
-                        // doVideo = (jsep.sdp.indexOf("m=video ") > -1);
                         doVideo = false;
                         Janus.debug("[Helper #" + helperId + "] Audio " + (doAudio ? "has" : "has NOT") + " been negotiated");
                         Janus.debug("[Helper #" + helperId + "] Video " + (doVideo ? "has" : "has NOT") + " been negotiated");
@@ -1049,15 +1032,6 @@ export class SipComponent  implements OnInit {
     console.log(keystroke);
     this.sipcall.dtmf({dtmf: { tones: keystroke, duration: 60}})
   };
-
-//   onRegister = () => {
-//     console.log('Form data submitted:', this.formData);
-//     this.registerUsername();
-//   };
-
-//   ngAfterViewInit() {
-//     this.init();
-//   };
 
   openDialPadDialog = () => {
     const dialogRef = this.dialog.open(DialpadComponent, {
