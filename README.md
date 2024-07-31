@@ -25,7 +25,21 @@ TODO:
 * [x] 4. Call Timer；
 * [x] 5. Dialpad and  DTMF；
 
-QA:
+
+#### `register`
+
+![image-20230814000503342](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/register.png)
+
+#### `incomingcall`
+
+![image-20230814000632767](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/incomingcall.png)
+
+#### `outbound`
+
+![outbound](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/outbound.png)
+
+
+### QA:
 
 1. compile failed(reference issue list)
 
@@ -164,16 +178,4 @@ QA:
 >  ```
 
 ![proxy_register](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/proxy_register.png)
-
-### `register`
-
-![image-20230814000503342](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/register.png)
-
-### `incomingcall`
-
-![image-20230814000632767](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/incomingcall.png)
-
-### `outbound`
-
-![outbound](https://github.com/NFhook/sipAppDemo/blob/main/src/assets/images/sipapp/outbound.png)
 
