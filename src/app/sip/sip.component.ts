@@ -1064,6 +1064,8 @@ export class SipComponent  implements OnInit {
   };
 
   incomingcallDialog = (callinPhone:boolean, offerlessInvite:boolean, jsep:any, doAudio:boolean,doVideo:boolean) => {
+    
+    this.dialog.closeAll();
     const dialogRef = this.dialog.open(DialogComponent, {
         height: '200px',
         width:  '600px',
@@ -1082,6 +1084,7 @@ export class SipComponent  implements OnInit {
   };
 
   hangupDialog = (reason:string, code:string) => {
+
     const dialogRef = this.dialog.open(DialogComponent, {
         height: '200px',
         width:  '600px',
