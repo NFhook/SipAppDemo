@@ -402,6 +402,7 @@ export class SipComponent  implements OnInit {
                             this.sipcall.hangup();
                         }
                         Janus.log(error);
+                        this.registerErrorDialog(error);
                         return;
                     }
                     let callId = msg['call_id'];
@@ -1083,8 +1084,20 @@ export class SipComponent  implements OnInit {
     });
   };
 
-  hangupDialog = (reason:string, code:string) => {
+  registerErrorDialog = (error:any) => {
+    this.dialog.closeAll();
+    const dialogRef = this.dialog.open(DialogComponent, {
+        height: '200px',
+        width:  '600px',
+        // disableClose: true,
+        autoFocus: true,
+        position: {top: '60px'},
+        data: {error}
+    });
+  };
 
+  hangupDialog = (reason:string, code:string) => {
+    this.dialog.closeAll();
     const dialogRef = this.dialog.open(DialogComponent, {
         height: '200px',
         width:  '600px',
